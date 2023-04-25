@@ -1,0 +1,55 @@
+.kesa-header-container {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.kesa-header {
+    width: 95%;
+    margin: 20px;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.kesa-logo {
+    height: 47px;
+}
+
+.kesa-menu {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kesa-menu-element {
+    margin-left: 10px;
+    color: #FF6060;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+}
+
+.kesa-menu-element:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1080px) {
+
+    .kesa-logo {
+        height: 68px;
+    }
+
+    .kesa-menu-element {
+        margin-left: 52px;
+        font-size: 24px;
+    }
+
+}
