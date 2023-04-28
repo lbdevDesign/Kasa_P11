@@ -1,11 +1,10 @@
 .kesa-dropdown {
-    margin-top: 50px;
-    position: relative;
+    margin-top: 25px;
+    width: 100%;
 }
 
 .kesa-dropdown-top {
     z-index: 1;
-    position: absolute;
     width: 100%;
     top: -20%;
     background-color: #FF6060;
@@ -25,9 +24,13 @@
     line-height: 150%;
 }
 
-.kesa-dropdon-arrow {
+.kesa-dropdown-arrow {
     width: 16px;
     padding: 10px;
+}
+
+.arrow-up {
+    transform: rotate(180deg);
 }
 
 .kesa-dropdown-contentBox {
@@ -48,10 +51,14 @@
     line-height: 150%;
 }
 
-@media screen and (min-width: 1080px) {
+.content-hide {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
 
     .kesa-dropdown {
-        margin-top: 65px;
+        margin-top: 40px;
     }
 
     .kesa-dropdown-title {

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import '../style/App.css';
+import '../style/About.css';
 
 import Header from './Header'
 import Dropdown from './Dropdown'
@@ -7,7 +7,7 @@ import Footer from './Footer'
 
 import ImgTop from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png'
 
-function App() {
+function About() {
   return (
     <div>
 
@@ -44,4 +44,4 @@ function App() {
   );
 }
 
-export default App;
+export default About;
