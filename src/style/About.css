@@ -5,20 +5,23 @@
 .kesa-aPropos-title {
   z-index: 1;
   margin: 0px;
-  font-size: 48px;
+  font-size: 24px;
+  font-weight: 500;
   color: white;
-  text-transform: uppercase;
-  position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .kesa-imgTop {
   margin-bottom: 0px;
-  width: 95%;
-  max-width: 1240px;
+  height: 222px;
+  width: 88%;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../assets/kalen-emsley-Bkci_8qcdvQ-unsplash\ 2.png);
+  background-size: cover;
+  background-attachment: fixed; 
+  background-position: 0 -300px;
 }
 
 .kesa-imgTop-img {
@@ -42,4 +45,15 @@
 }
 
 
+@media screen and (min-width: 800px) {
 
+  .kesa-imgTop {
+    width: 84%;
+    max-width: 1240px;
+  }
+
+  .kesa-aPropos-title {
+    font-size: 48px;
+  }
+
+}

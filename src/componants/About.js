@@ -17,8 +17,8 @@ function About() {
 
         <div className='kesa-imgTop'>
 
-          {/*<h1 className='kesa-aPropos-title'>A Propos</h1>*/}
-          <img src={ImgTop} alt='Image de montagnes' className='kesa-imgTop-img'/>
+          <h1 className='kesa-aPropos-title'>A Propos</h1>
+          {/* <img src={ImgTop} alt='Image de montagnes' className='kesa-imgTop-img'/> */}
 
         </div>
 

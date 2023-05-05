@@ -1,0 +1,41 @@
+.kesa-resultCard {
+   background-color: #FF6060;
+   height: 255px;
+   width: 335px;
+   border-radius: 10px;
+   position: relative;
+}
+
+.kesa-resultTitle {
+    margin: 0px;
+    color: white;
+    font-family: Montserrat;
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: 500;
+    width: 30%;
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+
+}
+
+.kesa-cardShadow {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+@media screen and (min-width: 800px) {
+
+
+    .kesa-resultCard {
+        height: 340px;
+        width: 340px;
+    }
+    .kesa-resultTitle {
+        bottom: 20px;
+    }
+    
+}
