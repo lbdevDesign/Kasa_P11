@@ -25,10 +25,13 @@ function Dropdown (props) {
                     <p className="kesa-dropdown-title">{dropdownTitle}</p>
                     <img src={dropdownArrow} alt='ouvrir le dropdown' className='kesa-dropdown-arrow' onClick={hideDropdown}/>
                 </div>
-                <p className='kesa-dropdown-content'>{dropdownContent}</p>
+                <p className='kesa-dropdown-content'>{dropdownContent}</p> 
             </div>
         </div>
     )
 }
 
 export default Dropdown;
+
+
+//if ternaire tableau

@@ -7,11 +7,13 @@ function ResultCard(props) {
 
     return (
         <div className='kesa-resultCard'>
-            <p className='kesa-resultTitle'>{cardTitle}</p>
-            <div className='kesa-cardShadow'></div>
+                <p className='kesa-resultTitle'>{cardTitle}</p>
+                <div className='kesa-cardShadow'></div>
+                <img className='kesa-cardImg' src={cardImg} />
         </div>
     )
 
 }
 
 export default ResultCard;
+

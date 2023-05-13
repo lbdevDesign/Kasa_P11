@@ -1,10 +1,10 @@
 import '../style/Home.css';
 
-import Header from './Header'
-import ResultCard from './ResultCard'
-import Footer from './Footer'
+import Header from '../componants/Header'
+import ResultCard from '../componants/ResultCard'
+import Footer from '../componants/Footer'
+import Json from '../data/Kasa.json'
 
-import ImgTop from '../assets/IMG.png'
 
 function Home() {
 
@@ -17,16 +17,16 @@ function Home() {
 
           <div className='kesa-imgTopHome'>
             <h1 className='kesa-Home-title'>Chez vous, partout et ailleurs</h1>
-            {/*<img src={ImgTop} alt='Image de bord de mer' className='kesa-imgTop-Home'/>*/}
           </div>
 
           <div className='kesa-logements-results'>
-            <ResultCard cardTitle='Titre de la location' />
-            <ResultCard cardTitle='Titre de la location' />
-            <ResultCard cardTitle='Titre de la location' />
-            <ResultCard cardTitle='Titre de la location' />
-            <ResultCard cardTitle='Titre de la location' />
-            <ResultCard cardTitle='Titre de la location' />
+
+            {
+              Json.map(element => 
+                <ResultCard cardTitle={element.title} cardImg={element.cover} />
+              )
+            }
+
 
     </div>
 

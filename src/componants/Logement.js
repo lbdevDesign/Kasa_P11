@@ -1,8 +1,8 @@
 import '../style/Logement.css';
 
-import Header from './Header'
-import Dropdown from './Dropdown'
-import Footer from './Footer'
+import Header from '../componants/Header'
+import Dropdown from '../componants/Dropdown'
+import Footer from '../componants/Footer'
 
 import ImgLogement from '../assets/imgLogement.png'
 import Arrow from '../assets/arrow.svg'
@@ -31,25 +31,29 @@ function Logement() {
 
                 <div className='kesa-logement-infos'>
 
-                    <h1 className='kesa-logement-title'>Paris center, on the romantic Canal Saint-Martin</h1>
+                    <div className='kesa-logement-infos1'>
 
-                    <h2 className='kesa-logement-location'>Paris, Île-de-France</h2>
+                        <h1 className='kesa-logement-title'>Paris center, on the romantic Canal Saint-Martin</h1>
 
-                    <div className='kesa-logement-tagsContainer'>
+                        <h2 className='kesa-logement-location'>Paris, Île-de-France</h2>
 
-                        <div className='kesa-logement-tag'>
-                            <p className='kesa-logement-tagtext'>Cozy</p>
+                        <div className='kesa-logement-tagsContainer'>
+
+                            <div className='kesa-logement-tag'>
+                                <p className='kesa-logement-tagtext'>Cozy</p>
+                            </div>
+
+                            <div className='kesa-logement-tag'>
+                                <p className='kesa-logement-tagtext'>Canal</p>
+                            </div>
+
+                            <div className='kesa-logement-tag'>
+                                <p className='kesa-logement-tagtext'>Paris 10</p>
+                            </div>
+
                         </div>
 
-                        <div className='kesa-logement-tag'>
-                            <p className='kesa-logement-tagtext'>Canal</p>
-                        </div>
-
-                        <div className='kesa-logement-tag'>
-                            <p className='kesa-logement-tagtext'>Paris 10</p>
-                        </div>
-
-                    </div>
+                    </div>                    
 
                     <div className='kesa-logement-host'>
 
@@ -79,9 +83,9 @@ function Logement() {
 
                 <div className='kesa-logement-details'>
 
-                    <Dropdown dropdownTitle='Description' dropdownContent="Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied). "/>
+                    <Dropdown className='kesa-dropdown-logement' dropdownTitle='Description' dropdownContent="Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied). "/>
 
-                    <Dropdown dropdownTitle='Équipements' dropdownContent="Climatisation, Wi-Fi Cuisine, Espace de travail, Fer à repasser, Sèche-cheveux, Cintres"/>
+                    <Dropdown className='kesa-dropdown-logement-equipements' dropdownTitle='Équipements' dropdownContent="Climatisation, Wi-Fi Cuisine, Espace de travail, Fer à repasser, Sèche-cheveux, Cintres"/>
 
                 </div>
             </div>

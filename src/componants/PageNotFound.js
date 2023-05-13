@@ -1,7 +1,7 @@
 import '../style/PageNotFound.css';
 
-import Header from './Header'
-import Footer from './Footer'
+import Header from '../componants/Header'
+import Footer from '../componants/Footer'
 
 import Img404 from '../assets/404.png'
 
