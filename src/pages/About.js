@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import '../style/About.css';
 
-import Header from './Header'
-import Dropdown from './Dropdown'
-import Footer from './Footer'
+import Header from '../componants/Header'
+import Dropdown from '../componants/Dropdown'
+import Footer from '../componants/Footer'
 
 function About() {
   return (

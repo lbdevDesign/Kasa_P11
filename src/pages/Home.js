@@ -1,6 +1,7 @@
 import '../style/Home.css';
 
 import Header from '../componants/Header'
+import TopImg from './componants/TopImg'
 import ResultCard from '../componants/ResultCard'
 import Footer from '../componants/Footer'
 import Json from '../data/Kasa.json'
