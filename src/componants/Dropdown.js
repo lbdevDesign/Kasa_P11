@@ -4,9 +4,13 @@ import '../style/Dropdown.css'
 function Dropdown (props) {
 
     const dropdownTitle = props.dropdownTitle
-    const dropdownContent = props.dropdownContent
+    let dropdownContent = props.dropdownContent
 
-     function hideDropdown(e) {
+    if (Array.isArray(dropdownContent)) {
+        dropdownContent = <ul> {dropdownContent.map(element => <li>{element}</li>)} </ul>
+    }
+
+    function hideDropdown(e) {
 
         const arrow = e.target
         const content = arrow.parentNode.nextSibling
@@ -16,7 +20,6 @@ function Dropdown (props) {
             content.classList.toggle('content-hide');
 
     };
-
 
     return (
         <div className="kesa-dropdown">    
@@ -34,4 +37,6 @@ function Dropdown (props) {
 export default Dropdown;
 
 
-//if ternaire tableau
+// ajouter la fonction de retour à la ligne lorsqu'il s'agit d'un tableau (if ternaire tableau)
+
+// enlever les petits points

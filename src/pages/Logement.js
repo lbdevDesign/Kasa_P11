@@ -3,13 +3,25 @@ import '../style/Logement.css';
 import Header from '../componants/Header'
 import Dropdown from '../componants/Dropdown'
 import Footer from '../componants/Footer'
+import PageNotFound from './PageNotFound';
 
 import ImgLogement from '../assets/imgLogement.png'
 import Arrow from '../assets/arrow.svg'
 import StarFull from '../assets/starFull.svg'
 import StarEmpty from '../assets/starEmpty.svg'
+import Json from '../data/Kasa.json';
+import { useParams } from 'react-router-dom';
 
 function Logement() {
+
+    let {id} = useParams(); // je récupère tout ce qu'il y a dans l'url
+    const logementJson = Json.filter(log => log.id === id)// je cherche dans le json et je ne veux que le logement qui est égal à l'id de l'url (fonction filter)
+    const logement = (logementJson.length > 0) ? logementJson[0] : null
+    console.log(logement);
+
+    if (logement === null) {
+        return <PageNotFound />
+    }
 
     return (
         <div>
@@ -33,9 +45,9 @@ function Logement() {
 
                     <div className='kesa-logement-infos1'>
 
-                        <h1 className='kesa-logement-title'>Paris center, on the romantic Canal Saint-Martin</h1>
+                        <h1 className='kesa-logement-title'>{logement.title}</h1>
 
-                        <h2 className='kesa-logement-location'>Paris, Île-de-France</h2>
+                        <h2 className='kesa-logement-location'>{logement.location}</h2>
 
                         <div className='kesa-logement-tagsContainer'>
 
@@ -73,9 +85,9 @@ function Logement() {
 
                         <div className='kesa-logement-hostInfos'>
 
-                            <p className='kesa-logement-hostName'>Alexandre <br/>Dumas</p>
+                            <p className='kesa-logement-hostName'>{logement.host.name}</p>
 
-                            <div className='kesa-logement-hostImg'></div>
+                            <img className='kesa-logement-hostImg' src={logement.host.picture}/>
 
                         </div>
                     </div>
@@ -83,9 +95,9 @@ function Logement() {
 
                 <div className='kesa-logement-details'>
 
-                    <Dropdown className='kesa-dropdown-logement' dropdownTitle='Description' dropdownContent="Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied). "/>
+                    <Dropdown className='kesa-dropdown-logement' dropdownTitle='Description' dropdownContent={logement.description}/>
 
-                    <Dropdown className='kesa-dropdown-logement-equipements' dropdownTitle='Équipements' dropdownContent="Climatisation, Wi-Fi Cuisine, Espace de travail, Fer à repasser, Sèche-cheveux, Cintres"/>
+                    <Dropdown className='kesa-dropdown-logement-equipements' dropdownTitle='Équipements' dropdownContent={logement.equipments}/>
 
                 </div>
             </div>
@@ -96,3 +108,4 @@ function Logement() {
 }
 
 export default Logement;
+

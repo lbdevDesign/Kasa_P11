@@ -2,6 +2,7 @@
 import '../style/About.css';
 
 import Header from '../componants/Header'
+import TopImg from '../componants/TopImg'
 import Dropdown from '../componants/Dropdown'
 import Footer from '../componants/Footer'
 
@@ -13,11 +14,7 @@ function About() {
 
       <div className='kesa-page-container'>
 
-        <div className='kesa-imgTop'>
-
-          <h1 className='kesa-aPropos-title'>A Propos</h1>
-
-        </div>
+        <TopImg page='about' />
 
         <div className='kesa-dropdown-container'>
 

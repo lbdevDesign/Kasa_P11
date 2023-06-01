@@ -24,6 +24,10 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
+    path: "/logement/:id",
+    element: <Logement />,
+  },
+  {
     path: "*",
     element: <PageNotFound />,
   },
