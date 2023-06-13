@@ -1,12 +1,15 @@
 import '../style/Logement.css';
 
 import Header from '../componants/Header'
+import Gallery from '../componants/Gallery'
 import Dropdown from '../componants/Dropdown'
 import Footer from '../componants/Footer'
 import PageNotFound from './PageNotFound';
 
 import ImgLogement from '../assets/imgLogement.png'
-import Arrow from '../assets/arrow.svg'
+import Arrow from '../assets/arrowLeft.svg'
+import RatingStars from '../componants/RatingStars'
+import Tag from '../componants/Tag'
 import StarFull from '../assets/starFull.svg'
 import StarEmpty from '../assets/starEmpty.svg'
 import Json from '../data/Kasa.json';
@@ -29,7 +32,9 @@ function Logement() {
 
             <div className='kesa-logement-container'>
 
-                <div className='kesa-logement-visuels'>
+                <Gallery imageSlider={logement.pictures} />
+
+                {/*<div className='kesa-logement-visuels'>
 
                     <img className='kesa-logement-img' alt='Pièce à vivre du logement' src={ImgLogement}/>
 
@@ -39,7 +44,7 @@ function Logement() {
 
                     <p className='kesa-logement-imgPos'>1/4</p>
 
-                </div>
+                </div>*/}
 
                 <div className='kesa-logement-infos'>
 
@@ -49,7 +54,7 @@ function Logement() {
 
                         <h2 className='kesa-logement-location'>{logement.location}</h2>
 
-                        <div className='kesa-logement-tagsContainer'>
+                        {/*<div className='kesa-logement-tagsContainer'>
 
                             <div className='kesa-logement-tag'>
                                 <p className='kesa-logement-tagtext'>Cozy</p>
@@ -63,7 +68,9 @@ function Logement() {
                                 <p className='kesa-logement-tagtext'>Paris 10</p>
                             </div>
 
-                        </div>
+                        </div>*/}
+
+                        <Tag tags={logement.tags} />
 
                     </div>                    
 
@@ -71,15 +78,13 @@ function Logement() {
 
                         <div className='kesa-logement-scoreContainer'>
 
+                            {/*<img className='kesa-logement-star' alt='point' src={StarFull}/>
                             <img className='kesa-logement-star' alt='point' src={StarFull}/>
-
                             <img className='kesa-logement-star' alt='point' src={StarFull}/>
-
-                            <img className='kesa-logement-star' alt='point' src={StarFull}/>
-
                             <img className='kesa-logement-star' alt='minus' src={StarEmpty}/>
+                            <img className='kesa-logement-star' alt='minus' src={StarEmpty}/>*/}
 
-                            <img className='kesa-logement-star' alt='minus' src={StarEmpty}/>
+                            <RatingStars rating={logement.rating}/>
 
                         </div>
 

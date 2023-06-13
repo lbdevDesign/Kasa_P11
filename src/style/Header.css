@@ -37,6 +37,10 @@
     line-height: 150%;
 }
 
+.kesa-menu a {
+    text-decoration: none;
+}
+
 .kesa-menu-element:hover {
     text-decoration: underline;
 }

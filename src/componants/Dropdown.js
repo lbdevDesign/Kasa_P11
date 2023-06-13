@@ -7,7 +7,7 @@ function Dropdown (props) {
     let dropdownContent = props.dropdownContent
 
     if (Array.isArray(dropdownContent)) {
-        dropdownContent = <ul> {dropdownContent.map(element => <li>{element}</li>)} </ul>
+        dropdownContent = <ul className='dropdown-ul'> {dropdownContent.map(element => <li>{element}</li>)} </ul>
     }
 
     function hideDropdown(e) {
@@ -37,6 +37,3 @@ function Dropdown (props) {
 export default Dropdown;
 
 
-// ajouter la fonction de retour à la ligne lorsqu'il s'agit d'un tableau (if ternaire tableau)
-
-// enlever les petits points

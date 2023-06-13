@@ -1,0 +1,26 @@
+.stars_active {
+    margin-right: 4px;
+    height: 12px;
+}
+
+.stars_inactive {
+    margin-right: 4px;
+    height: 12px;
+    filter: saturate(0);
+}
+
+@media screen and (min-width: 800px) {
+
+    .stars_active {
+        height: 24px;
+        margin-right: 0px;
+        margin-left: 12px;
+    }
+    
+    .stars_inactive {
+        height: 24px;
+        margin-right: 0px;
+        margin-left: 12px;
+    }
+
+}
