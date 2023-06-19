@@ -11,7 +11,7 @@ function Home() {
 
     return (
 
-      <div>
+      <>
   
         <Header />
 
@@ -26,8 +26,8 @@ function Home() {
 
           <div className='kesa-logements-results'>
             {
-              Json.map(element => 
-                <ResultCard cardTitle={element.title} cardImg={element.cover} cardId={element.id}/>
+              Json.map(element  => 
+                <ResultCard key={element.id} cardTitle={element.title} cardImg={element.cover} cardId={element.id}/>
               )
             }
           </div>
@@ -36,11 +36,10 @@ function Home() {
   
         <Footer />
   
-      </div>
+      </>
       
     );
 }
   
 export default Home;
 
-//je ne comprend pas ce bug

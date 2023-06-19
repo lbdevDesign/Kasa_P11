@@ -41,7 +41,7 @@
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-weight: 500;
+    font-weight: 700;
     font-size: clamp(14px, 2vw, 18px);
 }
 

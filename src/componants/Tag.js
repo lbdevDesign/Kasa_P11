@@ -5,19 +5,22 @@ function Tag ({tags}) {
     console.log(tags);
 
     return (
-        <ul className="kesa-logement-tagsContainer">
-            {tags.map(element => {
-                
-                return (
+        <section>
+            <ul className="kesa-logement-tagsContainer">
+                {tags.map(element => {
+                    
+                    return (
 
-                    <li className="kesa-logement-tag">
-                        <p className="kesa-logement-tagtext">{element}</p>
-                    </li>
+                        <li className="kesa-logement-tag" key={element}>
+                            <p className="kesa-logement-tagtext">{element}</p>
+                        </li>
 
-                )
-                
-            })}
-        </ul>
+                    )
+                    
+                })}
+            </ul>
+        </section> 
+
     )
 
 }
